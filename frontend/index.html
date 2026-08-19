@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Events Search</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<section id="form-box" class="frosted">
+    <form id="search-form">
+        <h1 class="form-title">Events Search</h1>
+        <hr class="divider">
+        <label for="keyword">
+            <span class="label-text">Keyword</span><span class="label-star">*</span>
+            <input id="keyword" type="text" required autocomplete="off">
+            <span class="error-message" id="keyword-error"></span>
+        </label>
+
+        <div class="row">
+            <div class="col">
+            <label for="distance">Distance (miles)
+                <input id="distance" type="number" placeholder="10" min="1">
+            </label>
+            </div>
+
+            <div class="col">
+            <label for="category">
+                <span class="label-text">Category</span><span class="label-star">*</span>
+            <select id="category">
+                <option value="Default">Default</option>
+                    <option value="Music">Music</option>
+                    <option value="Sports">Sports</option>
+                    <option value="Arts & Theatre">Arts & Theatre</option>
+                    <option value="Film">Film</option>
+                    <option value="Miscellaneous">Miscellaneous</option>
+            </select>
+            </label>
+            </div>
+        </div>
+
+        <div id="loc-wrap">
+            <div class="loc-labels">
+                <label for="location">
+                    <span class="label-text">Location</span><span class="label-star">*</span>
+                </label>
+
+                <label class="auto-detect" for="auto-loc">
+                    <input id="auto-loc" type="checkbox"> Auto-Detect Location
+                </label>
+            </div>
+
+            <div id="location-input-wrap">
+                <input id="location" type="text" autocomplete="off">
+                <span class="error-message" id="location-error"></span>
+            </div>
+        </div>
+
+        <div class="btns">
+            <button id="btn-search" type="submit">SEARCH</button>
+            <button id="btn-clear" type="button">CLEAR</button>
+        </div>
+    </form>
+        <div id="error-tip" class="tooltip hidden"></div>
+</section>
+
+<section id="results"></section>
+<section id="details"></section>
+<script src="app.js"></script>
+</body>
+</html>

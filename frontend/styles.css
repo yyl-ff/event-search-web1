@@ -1,0 +1,476 @@
+:root { 
+    --glass: rgba(255,255,255,.2); 
+    --blur: blur(10px); }
+
+body {
+    margin:0; 
+    font-family: system-ui, Arial;
+    background: url('images/background.jpg') center/cover fixed no-repeat;
+    line-height: 1;
+}
+
+#form-box.frosted {
+    width:min(550px, 92%); 
+    margin:30px auto 20px; 
+    padding:16px 20px;
+    background: var(--glass); 
+    backdrop-filter: var(--blur);
+    border-radius:16px; 
+    color:#17a8ab;
+}
+
+/* Input field label */
+label { 
+    display: block; 
+    margin: 0;
+    font-size: 15px;
+    color: #17a8ab;
+    margin-left: 15px;
+}
+
+/* Keyword color */
+.label-text {
+    color: #17a8ab;
+}
+
+/* Star color */
+.label-star {
+    color: #ff0000;
+}
+
+input::placeholder {
+    color: #aaa;
+    opacity: 1;
+}
+
+.btns { 
+    display:flex;
+    margin-left: 14px;
+    gap:5px;
+    margin-top:10px;
+}
+
+button { 
+    cursor:pointer;
+    padding:10px 16px;
+    border:0;
+    border-radius:10px;
+}
+
+/* Search button */
+button#btn-search {
+    background-color: #f36c12;
+    color: #fff;
+}
+
+/* Clear button */
+button#btn-clear {
+    background-color: #2950ed;
+    color: #fff;
+}
+
+button#btn-search:hover { 
+    box-shadow:0 0 0 3px rgba(46,204,113,.6);
+}
+
+button#btn-clear:hover  { 
+    box-shadow:0 0 0 3px rgba(231,76,60,.6);
+}
+
+.tooltip { 
+    margin-top:10px;
+    background:#ff5a5a;
+    color:#fff;
+    padding:6px 10px;
+    border-radius:8px;
+}
+
+.hidden { 
+    display:none;
+}
+
+table { 
+    width:min(1100px, 90%);
+    margin:14px auto;
+    margin-top: 40px;
+    border-collapse:collapse;
+    background:#fff;
+    overflow:hidden;
+}
+
+th, td { 
+    padding:10px 12px;
+    border-bottom:1px solid #000000;
+    border-right:1px solid #000000;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 18px;
+}
+
+thead {
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); /* Add a shadow under the table header */
+    position: relative;
+    z-index: 1;  /* Ensure that the shadow appears on top of the table content. */
+}
+
+th.sortable { 
+    cursor:pointer;
+}
+
+th.sortable:hover { 
+    text-decoration:underline;
+}
+
+.card { 
+    width:min(1100px, 95%); 
+    margin:14px auto; 
+    background:#fff; 
+    padding:10px;
+    text-align: center;
+    color: #d40000;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 18px;
+}
+
+.card h3 { 
+    margin:8px 0 12px; 
+}
+
+.card .row { 
+    display:flex; 
+    gap:18px; 
+    align-items:start; 
+}
+
+.card img { 
+    max-width:260px; 
+    border-radius:8px; 
+}
+
+.toggle { 
+    cursor:pointer; 
+    color:#3498db; 
+    margin-top:10px; 
+}
+
+#results table td a {
+    color: #000;
+    text-decoration: none;
+}
+
+#results table td a:hover {
+    color: purple;
+}
+
+/* Input box style */
+input[type="text"], input[type="number"], select {
+    width: 95%;
+    height: 30px;
+    padding: 5px 10px;
+    margin: 6px 0;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 15px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, select:focus {
+    border-color: #3498db;
+}
+
+.form-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    color: #fff;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid #fff;
+    margin-left: 15px;
+    margin-right: 28px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* Arrange elements side by side */
+.row {
+    display: flex;
+    margin-top: 12px;
+    margin-bottom: 2px;
+}
+
+#distance {
+    width: 70%;
+    min-width: 80px;
+}
+
+#category {
+    width: 85%;
+    min-width: 230px;
+}
+
+input[type="number"], select {
+    width: 85%;
+    height: 30px;
+    padding: 5px 10px;
+    margin: 12px 0;
+    margin-top: 5px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+}
+
+.loc-labels {
+    display: flex;
+    align-items: center;
+}
+
+.auto-detect {
+    color: #888;
+    font-size: 12px;
+}
+
+/* Input box style */
+#location {
+    width: 92%;
+    padding: 10px;
+    margin-left: 15px;
+    margin-top: 3px;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+}
+
+/* Details frame */
+.details-card{
+    width:min(900px, 85%); 
+    margin:24px auto 20px; 
+    padding:22px 24px;
+    background: var(--glass); 
+    backdrop-filter: var(--blur);
+    border-radius:18px; 
+    color:#eaeaea;
+}
+
+.details-title{
+    text-align:center;
+    font-size:36px;
+    font-weight:400;
+    color:#e8ecef;
+    margin:0 0 18px;
+    line-height:1.2;
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* Two-column content */
+.details-grid{
+    display:grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap:24px;
+    align-items:start;
+}
+
+.detail-row{ 
+    margin:10px 0; 
+}
+
+.detail-row b {
+    font-size: 24px;
+    font-weight: 400;
+    color: #98f3ef;
+    display: block;
+    margin-bottom: 4px;
+    margin-top: 10px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.detail-row .val {
+    font-size: 14px;
+    color: #f5f8f9;
+    margin-bottom: 20px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.details-card a{ 
+    color:#5f8fff; 
+    text-decoration:none; 
+}
+.details-card a:hover{ 
+    text-decoration:underline; 
+}
+
+.seatmap{
+    max-width:80%;
+    border-radius:10px;
+    display:block;
+    margin:0 auto;
+}
+
+.badge {
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #fff;
+    display: inline-block;
+}
+
+.badge.on-sale {
+    background-color: #03923f;
+}
+
+.badge.off-sale {
+    background-color: #cc1703;
+}
+
+.badge.canceled {
+    background-color: #000000;
+}
+
+.badge.orange {
+    background-color: #fa9a00;
+}
+
+/* Show Venue Details */
+.toggle{
+    display:block;
+    width: min(900px, 85%);
+    margin: 10px auto 0;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.toggle .arrow {
+    display: inline-block;
+    width: 30px;       /* Arrow width */
+    height: 30px;      /* Arrow height */
+    border-left: 2px solid #ffffff;   /* Left border */
+    border-bottom: 2px solid #ffffff; /* Bottom border */
+    transform: rotate(-45deg);        /* Rotate into a V shape */
+    margin-top: 5px;
+    margin-bottom: 50px;
+}
+
+.venue-card {
+    margin: 14px auto; 
+    padding: 20px;
+    width:min(900px, 85%);
+    background: #ffffff;
+    border-radius: 18px;
+    color: #000000;
+    outline: 0.5px solid #000;
+    outline-offset: -15px;
+}
+
+.venue-header {
+    text-align: center;
+    margin-bottom: 12px;
+    margin-top: 12px;
+}
+
+.venue-header h2 {
+    font-family: "Times New Roman", serif;
+    font-size: 26px;
+    margin: auto;
+    width:max-content;
+    margin-bottom: 8px;
+    margin-top: 10px;
+}
+
+.venue-header h2::after {
+    content: "";
+    display: block;
+    height: 0.5px;
+    background: #000000;
+    margin: 4px auto 0;
+}
+
+.venue-logo {
+    max-height: 60px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+}
+
+.venue-content {
+    display: flex;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.venue-left, .venue-right {
+    width: 50%;
+    align-items: center;
+}
+
+.venue-left {
+    padding-right: 16px;
+    border-right: 0.5px solid #000000;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.venue-right {
+    padding-left: 16px;
+}
+
+.venue-left a, .venue-right a {
+    color: #61a5ff;
+    text-decoration: none;
+}
+
+.address-row {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.label {
+    font-weight: bold;
+}
+
+.value {
+    text-align: left;
+    word-break: break-word;
+}
+
+/* Responsive */
+@media (max-width:900px)
+{
+  .details-grid{ 
+    grid-template-columns:1fr; 
+}
+  .details-title{ 
+    font-size:34px; 
+}
+  .detail-row b{ 
+    font-size:24px; 
+}
+  .detail-row .val{ 
+    font-size:18px; 
+}
+}
+
+/* Compatibility */
+@supports not (width:max-content){
+  .venue-header h2{ 
+    display:inline-block; 
+    }
+}
+
