@@ -1,0 +1,11 @@
+.DS_Store
+venv/
+google-cloud-sdk/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+.idea/
+.vscode/
+
